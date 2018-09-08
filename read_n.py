@@ -1,8 +1,18 @@
-def read_n(filename):
+def read_n(filename, n):
   '''
-  readn_n function.
+  Generator function that reads the specified n number of lines at
+  a time from a given file
   '''
-  pass
+  f = open(filename)
+  counter = 0
+
+  while counter < n:
+    lines += f.readline()
+    counter += 1
+    if not lines:
+      break
+
+  yield lines
 
 def read_1(filename):
   '''
