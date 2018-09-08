@@ -4,15 +4,17 @@ def read_n(filename, n):
   a time from a given file
   '''
   f = open(filename)
-  counter = 0
 
-  while counter < n:
-    lines += f.readline()
-    counter += 1
+  while True:
+    lines = f.readline()
+
     if not lines:
       break
 
-  yield lines
+    for counter in range(n-1):
+      lines += f.readline()
+
+    yield lines
 
 def read_1(filename):
   '''
