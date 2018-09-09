@@ -3,6 +3,26 @@ This repository contains my solution to Reuven Lerner's Weekly Python Exercise S
 
 The prompt was to create a generator function that takes two arguments — the filename from which to read, and the maximum number of lines that should be returned with each iteration.
 
+## Getting Started
+
+These instructions will get you a copy of the code on your local machine for further modification, development, and testing.
+
+### Prerequisites
+
+Python 3.
+
+### Installing
+
+Download the file ```read_n.py``` to a desired project location.
+
+### Usage
+
+1. Once in your desired project location, start the Python interpreter.
+2. Import the module by typing ```import read_n```.
+3. Call the function with ```read_n.read_n(filename, number of lines to read)```.
+
+### Original Prompt
+
 Below, to quote Mr. Lerner:
 
 >Welcome to the first sample exercise!  If you subscribe to Weekly Python Exercise, you'll get a new exercise like this one sent to you automatically every Tuesday.  Moreover, you'll have exclusive access to our forums and discussion.
