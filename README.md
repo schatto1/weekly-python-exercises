@@ -37,7 +37,7 @@ Below, to quote Mr. Lerner:
     print(d['ac'])       # 4
 ```
 >Two hints to help you out:
->You'll want your class to inherit from the built-in "dict" class, and
->You'll want to implement the __getitem__ method
+>* You'll want your class to inherit from the built-in "dict" class, and
+>* You'll want to implement the __getitem__ method
 
 >I'll be back tomorrow with the solution.
