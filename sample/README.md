@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-# Weekly Python Exercises, Course A1 scripts and solutions
-Repository that contains useful scripts and projects created as part of Reuven Lerner's Weekly Python Exercises course A1.
-||||||| merged common ancestors
-=======
 # Multiple line file reader
-This repository contains my solution to Reuven Lerner's Weekly Python Exercise Sample Exercise #1, ```read_n```.
+This repository contains my solution to Reuven Lerner's Weekly Python Exercise Sample Exercise #1, `read_n`.
 
 The prompt was to create a generator function that takes two arguments — the filename from which to read, and the maximum number of lines that should be returned with each iteration.
 
@@ -18,15 +13,15 @@ Python 3.
 
 ### Installing
 
-Download the file ```read_n.py``` to a desired project location.
+Download the file `read_n.py` to a desired project location.
 
 ### Usage
 
 1. Once in your desired project location, start the Python interpreter.
-2. Import the module by typing ```import read_n```.
-3. Call the function with ```read_n.read_n(filename, number of lines to read)```.
+2. Import the module by typing `import read_n`.
+3. Call the function with `read_n.read_n(filename, number of lines to read)`.
 
-### Original Prompt
+## Original Prompt
 
 Below, to quote Mr. Lerner:
 
@@ -96,4 +91,3 @@ Below, to quote Mr. Lerner:
 >    https://realpython.com/blog/python/introduction-to-python-generators/
 
 >I'll be back tomorrow with a solution.
->>>>>>> read_n/master
