@@ -10,6 +10,11 @@ Pseudocode for ISBN Checker
 8. Check result with checksum (13th digit)
 9. Return corresponding result
 '''
-isbn = input('Enter the ISBN number: ')
 
-print(isbn)
+# Import all necessary packages
+import re
+
+# Prompt user for ISBN number, keep only numeric digits
+isbn_string = re.sub(r"\D", "", input('Enter the ISBN number: '))
+
+print(isbn_string)
