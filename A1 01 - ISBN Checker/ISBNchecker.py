@@ -14,27 +14,39 @@ Pseudocode for ISBN Checker
 # Import all necessary packages
 import re
 
-# Prompt user for ISBN number, keep only numeric digits
-isbn_string = re.sub(r"\D", "", input('Enter the ISBN number: '))
+# Start program, let user know what will happen
+print(f"Welcome to the ISBN Checker. Please enter the ISBN number to check, or q to quit.")
 
-# Terminate if not 13 digits
-if len(isbn_string) != 13:
-    print(f"Your input only contains {len(isbn_string)} digits. Please enter a 13 digit ISBN number.")
-    quit()
+while True:
+    # Prompt user for ISBN number, keep only numeric digits
+    isbn_string = input('Enter the ISBN number: ')
 
-isbn_digits = []
-checksum = 0
-for counter, digit in enumerate(isbn_string, 1):
-    if counter % 2 == 0:
-        isbn_digits.append(int(digit) * 3)
-    elif counter == len(isbn_string):
-        checksum = int(digit)
+    if isbn_string == "q":
+        print(f"Exiting program...")
+        quit()
+
+    # Strip string of all non-numeric chars
+    isbn_string = re.sub(r"\D", "", isbn_string)
+
+    # Reprompt if not 13 digits
+    if len(isbn_string) != 13:
+        print(f"Your input only contains {len(isbn_string)} digits. Please enter a 13 digit ISBN number.")
+
+    # got 13 digits, keep going with program
     else:
-        isbn_digits.append(int(digit))
+        isbn_digits = []
+        checksum = 0
+        for counter, digit in enumerate(isbn_string, 1):
+            if counter % 2 == 0:
+                isbn_digits.append(int(digit) * 3)
+            elif counter == len(isbn_string):
+                checksum = int(digit)
+            else:
+                isbn_digits.append(int(digit))
 
-calculation = 10 - (sum(isbn_digits) % 10)
+        calculation = 10 - (sum(isbn_digits) % 10)
 
-if calculation == checksum:
-    print(f"Yes, {isbn_string} is a valid ISBN number.")
-else:
-    print(f"No, {isbn_string} is NOT a valid ISBN number.")
+        if calculation == checksum:
+            print(f"Yes, {isbn_string} is a valid ISBN number.")
+        else:
+            print(f"No, {isbn_string} is NOT a valid ISBN number.")
