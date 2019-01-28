@@ -82,6 +82,6 @@ No, invalid
 > - Modulus: https://python-reference.readthedocs.io/en/latest/docs/operators/modulus.html
 
 >And if you're interested, you can also learn more about ISBN-13:
-- https://en.wikipedia.org/wiki/International_Standard_Book_Number#ISBN-13_check_digit_calculation
+> - https://en.wikipedia.org/wiki/International_Standard_Book_Number#ISBN-13_check_digit_calculation
 
 >I'll be back on Monday with my suggested solution.  Meanwhile, discuss your ideas (and frustrations) with others in the forum!  And when you post code, don't forget to hide it using the "greek" option, so that others don't accidentally see your code.
