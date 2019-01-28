@@ -15,11 +15,11 @@ Pseudocode for ISBN Checker
 import re
 
 # Start program, let user know what will happen
-print(f"Welcome to the ISBN Checker. Please enter the ISBN number to check, or q to quit.")
+print(f"Welcome to the ISBN Checker. Please enter the ISBN to check, or q to quit.")
 
 while True:
     # Prompt user for ISBN number, keep only numeric digits
-    isbn_string = input('Enter the ISBN number: ')
+    isbn_string = input('Enter the ISBN: ')
 
     if isbn_string == "q":
         print(f"Exiting program...")
@@ -30,7 +30,7 @@ while True:
 
     # Reprompt if not 13 digits
     if len(isbn_string) != 13:
-        print(f"Your input only contains {len(isbn_string)} digits. Please enter a 13 digit ISBN number.")
+        print(f"Your input only contains {len(isbn_string)} digits. Please enter a 13 digit ISBN.")
 
     # got 13 digits, keep going with program
     else:
@@ -47,6 +47,6 @@ while True:
         calculation = 10 - (sum(isbn_digits) % 10)
 
         if calculation == checksum:
-            print(f"Yes, {isbn_string} is a valid ISBN number.")
+            print(f"Yes, {isbn_string} is a valid ISBN.")
         else:
-            print(f"No, {isbn_string} is NOT a valid ISBN number.")
+            print(f"No, {isbn_string} is NOT a valid ISBN.")

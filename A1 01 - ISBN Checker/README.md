@@ -1,3 +1,29 @@
+# ISBN Checker
+This is my solution to Reuven Lerner's Weekly Python Exercise A1 Week 1 Exercise, `ISBNchecker`.
+
+The prompt was to create a script that checks user input to see if it is a valid 13-digit ISBN. The last digit of a 13-digit ISBN is a "checksum", where the digit depends on the first 12 digits of the ISBN. Every other digit of the ISBN is multiplied by 3, with the first 12 digits summed together. This total is then divided by 10, and the remainder kept. This remainder is then subtracted from 10. If the resulting integer is identical to the checksum (the 13th digit), then the provided number is a valid ISBN.
+
+This script performs the above operations on the user-provided number to see if the input is a valid ISBN.
+
+## Getting Started
+
+These instructions will get you a copy of the code on your local machine for further modification, development, and testing.
+
+### Prerequisites
+
+Python 3.
+
+### Installing
+
+Download the file `ISBNchecker.py` to a desired project location.
+
+### Usage
+
+1. Proceed to the desired project location in your terminal.
+2. Start the script by entering `python3 ISBNchecker.py` into the command line.
+
+## Original Prompt
+
 Below, to quote Mr. Lerner:
 
 >Welcome to Weekly Python Exercise, course A1!
@@ -9,11 +35,11 @@ Below, to quote Mr. Lerner:
 >This week, we'll start off by calculating checksums.  And we'll do it with an algorithm near and dear to my heart, calculating the checksum for ISBN-13.
 
 >Along the way, we'll practice:
-- Getting input from the user
-- Converting data from strings to integers (and back)
-- Iterating with "for" loops
-- Using the "enumerate" method
-- Some basic math operations, including % (modulus)
+> - Getting input from the user
+> - Converting data from strings to integers (and back)
+> - Iterating with "for" loops
+> - Using the "enumerate" method
+> - Some basic math operations, including % (modulus)
 
 >You see, every book published in the world has (or should have) a unique ISBN (international standard book number).  This allows everyone from publishers to bookstores to keep track of all of the books out there, even if different books have the same name. If you have experience with databases, you can think of ISBNs as the primary key of the book world.
 
@@ -48,12 +74,12 @@ No, invalid
 >From my perspective, it's enough to get input containing only digits.  If you want to remove and/or ignore non-digit characters, that's totally fine.
 
 >If you already have a good idea of how to do this, then great!  If not, then here are some resources you can use:
-- The "input" function: https://docs.python.org/3/library/functions.html?highlight=len#input
-- Converting strings to ints: https://guide.freecodecamp.org/python/how-to-convert-strings-into-integers-in-python/
-- The "enumerate" method: https://docs.python.org/3/library/functions.html?#enumerate
-- The "str.isdigit" method: https://python-reference.readthedocs.io/en/latest/docs/str/isdigit.html
-- Displaying output with f-strings: https://realpython.com/python-f-strings/
-- Modulus: https://python-reference.readthedocs.io/en/latest/docs/operators/modulus.html
+> - The "input" function: https://docs.python.org/3/library/functions.html?highlight=len#input
+> - Converting strings to ints: https://guide.freecodecamp.org/python/how-to-convert-strings-into-integers-in-python/
+> - The "enumerate" method: https://docs.python.org/3/library/functions.html?#enumerate
+> - The "str.isdigit" method: https://python-reference.readthedocs.io/en/latest/docs/str/isdigit.html
+> - Displaying output with f-strings: https://realpython.com/python-f-strings/
+> - Modulus: https://python-reference.readthedocs.io/en/latest/docs/operators/modulus.html
 
 >And if you're interested, you can also learn more about ISBN-13:
 - https://en.wikipedia.org/wiki/International_Standard_Book_Number#ISBN-13_check_digit_calculation
