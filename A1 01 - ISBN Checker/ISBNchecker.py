@@ -17,7 +17,24 @@ import re
 # Prompt user for ISBN number, keep only numeric digits
 isbn_string = re.sub(r"\D", "", input('Enter the ISBN number: '))
 
+# Terminate if not 13 digits
 if len(isbn_string) != 13:
     print(f"Your input only contains {len(isbn_string)} digits. Please enter a 13 digit ISBN number.")
+    quit()
 
-print(isbn_string)
+isbn_digits = []
+checksum = 0
+for counter, digit in enumerate(isbn_string, 1):
+    if counter % 2 == 0:
+        isbn_digits.append(int(digit) * 3)
+    elif counter == len(isbn_string):
+        checksum = int(digit)
+    else:
+        isbn_digits.append(int(digit))
+
+calculation = 10 - (sum(isbn_digits) % 10)
+
+if calculation == checksum:
+    print(f"Yes, {isbn_string} is a valid ISBN number.")
+else:
+    print(f"No, {isbn_string} is NOT a valid ISBN number.")
