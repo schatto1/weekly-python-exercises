@@ -21,7 +21,7 @@ Download the file `validate_isbn.py` to a desired project location.
 ### Usage
 
 1. Proceed to the desired project location in your terminal.
-2. Test the function by entereing "".
+2. Test the function by entering "pytest validate_isbn.py".
 
 ## Original Prompt
 
@@ -40,12 +40,12 @@ Below, to quote Mr. Lerner:
 >Second: If we receive too few or too many digits, then we'll raise a `TypeError` exception.  (It's normally not a good idea to raise built-in Python exceptions, but I don't want to add too much stuff to this exercise.)
 >
 >Third: While my prose is undoubtedly as precise as it is briliant, automated tests are a far better way to specify behavior. An increasingly popular system for testing software in Python is known as "pytest".  You can download and install "pytest" with
-    ```
+    ```shell
     pip3 install pytest
     ```
 >
 >I must admit that I've fallen in love with "pytest" in the last 6-8 months, and have been using it more and more in my teaching and in my own work. For now, we'll write our tests in the same file as we define our solution. I generally use a file called "solution.py" for this, which means that I can run the tests as:
-    ```
+    ```shell
     pytest solution.py
     ```
 >
@@ -54,14 +54,14 @@ Below, to quote Mr. Lerner:
 >If all of the tests pass (i.e., are green), then you can be pretty sure that the function works correctly.  Or if nothing else, you can be sure that the more standard cases are working.
 >
 >While it's easy to get into "pytest", it's also easy to get deep into testing, and to use some obscure features. I'm going to try to use very few "pytest" features this week, slowly but surely using more of them as the course progresses.  Actually, I will be using one powerful "pytest" feature already, namely the use of "parametrized" tests -- which let you define a number of inputs and the outputs you expect from similar tests.  I hope that it won't make the tests too confusing to read, understand, or use.
-
+>
 >Here are some resources to read up on this week's exercise:
 > - Defining functions: https://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/functions.html
 > - Installing "pytest": https://docs.pytest.org/en/latest/getting-started.html
 > - Using "pytest": https://docs.pytest.org/en/latest/getting-started.html
 > - Raising exceptions: https://realpython.com/python-exceptions/#raising-an-exception
 >Questions or comments?  (Or problems getting this set up?)  Ask away in the forum!
-
+>
 >Meanwhile, I'll be back with a solution on Monday.
 
 ```python
