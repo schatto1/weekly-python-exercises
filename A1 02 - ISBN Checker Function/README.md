@@ -41,15 +41,14 @@ Below, to quote Mr. Lerner:
 >
 >Third: While my prose is undoubtedly as precise as it is briliant, automated tests are a far better way to specify behavior. An increasingly popular system for testing software in Python is known as "pytest".  You can download and install "pytest" with
 
-    ```shell
-    pip3 install pytest
-    ```
+```
+pip3 install pytest
+```
 >
 >I must admit that I've fallen in love with "pytest" in the last 6-8 months, and have been using it more and more in my teaching and in my own work. For now, we'll write our tests in the same file as we define our solution. I generally use a file called "solution.py" for this, which means that I can run the tests as:
-
-    ```shell
-    pytest solution.py
-    ```
+```
+pytest solution.py
+```
 >
 >This tells "pytest" that it should open the file "solution.py" (in the current directory), and run all of the tests in it.  Tests are functions whose names start with the pattern "test_".  Normally, we won't really want to put our tests in the same file as our function, but for now, it's not a terrible thing.
 >
