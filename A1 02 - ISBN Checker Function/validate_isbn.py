@@ -23,7 +23,7 @@ def validate_isbn(isbn_string):
 
     # Throw exception if not 13 digits
     if len(isbn_string) != 13:
-        raise TypeError(f"Your input contains {len(isbn_string)} digits. Please enter a 13 digit ISBN.")
+        raise TypeError(f"Your input should contain a 13 digits, not {len(isbn_string)}")
 
     # got 13 digits, keep going with program
     isbn_digits = []
