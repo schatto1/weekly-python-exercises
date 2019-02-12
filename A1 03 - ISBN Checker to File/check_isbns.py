@@ -50,28 +50,25 @@ def validate_isbn(isbn_string):
 
 import pytest
 
-@pytest.mark.parametrize('isbn', [
-    '',
-    '12345',
-    '123456789012345',
-    ])
-def test_bad_isbn_length(isbn):
-    with pytest.raises(TypeError) as e:
-        validate_isbn(isbn)
-    assert e.value.args[0].endswith(f', not {len(isbn)}')
+def test_isbn_checker(tmp_path):
+    test_directory = tmp_path / 'testfiles'
+    test_directory.mkdir()
+    filename = test_directory / 'outfile.txt'
 
-@pytest.mark.parametrize('isbn', [
-    '9780143127796',
-    '9780415700108',
-    '9780525533184',
-    ])
-def test_good_isbn(isbn):
-    assert validate_isbn(isbn)
+    test_isbns = {'': 'bad length of 0',          # empty; invalid
+                  '12345': 'bad length of 5',
+                  '123456789012345' : 'bad length of 15',
+                  '9780143127796': 'True',
+                  '9780415700108': 'True',
+                  '9780525533184': 'True',
+                  '9780143127793': 'False',
+                  '9780415700103': 'False',
+                  '9780525533183': 'False' }
 
-@pytest.mark.parametrize('isbn', [
-    '9780143127793',
-    '9780415700103',
-    '9780525533183',
-    ])
-def test_bad_isbn(isbn):
-    assert validate_isbn(isbn) == False
+    validate_isbns(filename, *test_isbns)
+
+    for one_line in open(filename):
+        print(one_line)
+        isbn, assessment = one_line.rstrip().split('\t')
+
+        assert assessment == test_isbns[isbn]
