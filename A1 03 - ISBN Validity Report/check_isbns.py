@@ -34,7 +34,7 @@ def validate_isbns(*args):
 
     with open(outfile, "a") as output:
         for isbn in argsiter:
-            output.write(check_isbn(isbn) + "\n")
+            output.write(isbn + "\t" + check_isbn(isbn) + "\n")
 
     print("Report has been created.")
     return
