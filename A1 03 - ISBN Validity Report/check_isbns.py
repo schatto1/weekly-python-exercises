@@ -23,9 +23,9 @@ def check_isbn(isbn_string):
     calculation = 10 - (sum(isbn_digits) % 10)
 
     if calculation == checksum:
-        return True
+        return "True"
     else:
-        return False
+        return "False"
 
 def validate_isbns(*args):
     # open file to append to using first argument
