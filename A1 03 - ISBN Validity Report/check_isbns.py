@@ -27,13 +27,10 @@ def check_isbn(isbn_string):
     else:
         return False
 
-def validate_isbns(*args):
+def validate_isbns(filename, *args):
     # open file to append to using first argument
-    argsiter = iter(args)
-    outfile = next(argsiter)
-
-    with open(outfile, "a") as output:
-        for isbn in argsiter:
+    with open(filename, "a") as output:
+        for isbn in args:
             output.write(isbn + "\t" + str(check_isbn(isbn)) + "\n")
 
     print("Report has been created.")
