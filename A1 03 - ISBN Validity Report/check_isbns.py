@@ -1,16 +1,13 @@
 # Import all necessary packages
 import re
 
-def validate_isbn(isbn_string):
-    # Import necessary regex package
-    import re
-
+def check_isbn(isbn_string):
     # Strip string of all non-numeric chars
     isbn_string = re.sub(r"\D", "", isbn_string)
 
     # Throw exception if not 13 digits
     if len(isbn_string) != 13:
-        raise TypeError(f"Your input should contain a 13 digits, not {len(isbn_string)}")
+        return f"bad length of {len(isbn_string)}"
 
     # got 13 digits, keep going with program
     isbn_digits = []
@@ -30,6 +27,17 @@ def validate_isbn(isbn_string):
     else:
         return False
 
+def validate_isbns(*args):
+    # open file to append to using first argument
+    argsiter = iter(args)
+    outfile = next(argsiter)
+
+    with open(outfile, "a") as output:
+        for isbn in argsiter:
+            output.write(check_isbn(isbn) + "\n")
+
+    print("Report has been created.")
+    return
 
 # put the below code in solution.py
 # put your solution (the function validate_isbn) above it
