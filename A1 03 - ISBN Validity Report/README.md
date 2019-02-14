@@ -1,4 +1,4 @@
-# ISBN Checker
+# ISBN Validity Report
 This is my solution to Reuven Lerner's Weekly Python Exercise A1 Week 3 Exercise, `ISBN Validity Report`.
 
 The prompt was to create a script containing a function `validate_isbns` that creates and writes a file containing the validity of a list of 13-digit ISBNs provided by user input.
@@ -72,7 +72,7 @@ check_isbns('mybooks.txt', '12345', '9780525533184', '9780143127793')
 >
 >from the command line.
 >
-I'll be back on Monday with a solution.
+>I'll be back on Monday with a solution.
 >
 >Reuven
 
