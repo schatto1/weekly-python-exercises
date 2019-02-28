@@ -1,4 +1,4 @@
-# ISBN Checker
+# ISBN Checker Function
 This is my solution to Reuven Lerner's Weekly Python Exercise A1 Week 2 Exercise, `ISBNcheckerFunction`.
 
 The prompt was to create a script containing a function `validate_isbn` that checks user input to see if it is a valid 13-digit ISBN. The last digit of a 13-digit ISBN is a "checksum", where the digit depends on the first 12 digits of the ISBN. Every other digit of the ISBN is multiplied by 3, with the first 12 digits summed together. This total is then divided by 10, and the remainder kept. This remainder is then subtracted from 10. If the resulting integer is identical to the checksum (the 13th digit), then the provided number is a valid ISBN.

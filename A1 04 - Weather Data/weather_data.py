@@ -1,7 +1,10 @@
 # Import all necessary packages
-import re
+# import re #regex package
 
-def check_isbn(isbn_string):
+def weather_info(weather_string):
+    # input should be in following format:
+    # YYYY-MM-DD, City, Country, high temperature, low temparature, amount of precipitation
+
     # Strip string of all non-numeric chars
     isbn_string = re.sub(r"\D", "", isbn_string)
 
@@ -35,32 +38,3 @@ def validate_isbns(filename, *args):
 
     print("Report has been created.")
     return
-
-# put the below code in solution.py
-# put your solution (the function validate_isbn) above it
-# run it from the command line with "pytest solution.py'
-
-import pytest
-
-def test_isbn_checker(tmp_path):
-    test_directory = tmp_path / 'testfiles'
-    test_directory.mkdir()
-    filename = test_directory / 'outfile.txt'
-
-    test_isbns = {'': 'bad length of 0',          # empty; invalid
-                  '12345': 'bad length of 5',
-                  '123456789012345' : 'bad length of 15',
-                  '9780143127796': 'True',
-                  '9780415700108': 'True',
-                  '9780525533184': 'True',
-                  '9780143127793': 'False',
-                  '9780415700103': 'False',
-                  '9780525533183': 'False' }
-
-    validate_isbns(filename, *test_isbns)
-
-    for one_line in open(filename):
-        print(one_line)
-        isbn, assessment = one_line.rstrip().split('\t')
-
-        assert assessment == test_isbns[isbn]
