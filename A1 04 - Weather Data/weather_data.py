@@ -15,11 +15,22 @@
     # 8. Precipitation (int)
 # 4. If cannot split into 8 parts, tell user, return to loop
 # 5. Save parts into tuple containing 8 elements
-# 6. Repeat 1-5
+# 6. Write tuple onto file
+# 7. Repeat 1-6
 
-def weather_info(weather_string):
+def weather_info(weatherString):
     # input should be in following format:
     # YYYY-MM-DD, City, Country, high temperature, low temparature, amount of precipitation
+    weatherData = weatherString.split(",")
+    weatherData = [item.strip() for item in weatherData]
+
+    dateFields = weatherData[0].split("-")
+
+    weatherTuple = tuple(dateFields + weatherData[1:])
+    print(type(weatherTuple))
+
+    for item in weatherTuple:
+        print(item)
     return
 
 def collect_weather():
@@ -31,7 +42,7 @@ def collect_weather():
         if weatherInput == "":
             print("Exiting program.")
             break
-        print(weatherInput)
+        weather_info(weatherInput)
 
     return
 
