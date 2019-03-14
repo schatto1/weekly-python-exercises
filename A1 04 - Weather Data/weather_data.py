@@ -27,7 +27,7 @@ def collect_weather(outFile):
         while True:
             userInput = input("Enter weather data below, or blank to exit:\n" +
                                  "Format: YYYY-MM-DD, City, Country, high temperature (in Celsius), " +
-                                 "low temparature (in Celsius), amount of precipitation (in mm)\n--> ").strip()
+                                 "low temperature (in Celsius), amount of precipitation (in mm)\n--> ").strip()
             if not userInput:
                 print("Exiting program.")
                 break

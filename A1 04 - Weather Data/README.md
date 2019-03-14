@@ -1,11 +1,17 @@
 # Weather Data
 This is my solution to Reuven Lerner's Weekly Python Exercise A1 Week 4 Exercise, `Weather Data`.
 
-The prompt was to create a script containing a function `validate_isbns` that creates and writes a file containing the validity of a list of 13-digit ISBNs provided by user input.
+The prompt was to create a script that repeatedly prompts the user for weather information, and once splitting the string into a tuple, write the information to a file. The function loops until the user enters a blank entry into the prompt.
 
-The last digit of a 13-digit ISBN is a "checksum", where the digit depends on the first 12 digits of the ISBN. Every other digit of the ISBN is multiplied by 3, with the first 12 digits summed together. This total is then divided by 10, and the remainder kept. This remainder is then subtracted from 10. If the resulting integer is identical to the checksum (the 13th digit), then the provided number is a valid ISBN.
+The information to be entered by the user would be in the following format:
+- YYYY-MM-DD
+- City
+- Country
+- High temperature (in Celsius)
+- Low temperature (in Celsius)
+- Amount of precipitation (in mm)
 
-The `validate_isbns` function performs the above operations on the user-provided numbers to see if each input is a valid ISBN, and creates a report that contains the results.
+each separated by a comma (`,`).
 
 ## Getting Started
 
@@ -18,12 +24,12 @@ These instructions will get you a copy of the code on your local machine for fur
 
 ### Installing
 
-Download the file `check_isbns.py` to a desired project location.
+Download the file `weather_data.py` to a desired project location.
 
 ### Usage
 
 1. Proceed to the desired project location in your terminal.
-2. Test the function by entering "python3 pytest -vv check_isbns.py".
+2. Run the function by entering "python3 weather_data.py".
 
 ## Original Prompt
 
