@@ -19,19 +19,19 @@
 # 7. Repeat 1-6
 
 def weather_string_to_tuple(weatherString):
-    # input should be in following format:
-    # YYYY-MM-DD, City, Country, high temperature, low temparature, amount of precipitation
+    '''
+    Returns a tuple containing weather information extracted
+    from user provided input.
+
+    Input should be in following format:
+    YYYY-MM-DD, City, Country, high temperature, low temparature, amount of precipitation
+    '''
+
     weatherData = weatherString.split(",")
     weatherData = [item.strip() for item in weatherData]
-
     dateFields = weatherData[0].split("-")
-
     weatherTuple = tuple(dateFields + weatherData[1:])
-    print(type(weatherTuple))
-
-    for item in weatherTuple:
-        print(item)
-    return
+    return weather
 
 def collect_weather():
     # Prompt user for weather input until they enter blank
