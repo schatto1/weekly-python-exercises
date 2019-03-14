@@ -18,7 +18,7 @@
 # 6. Write tuple onto file
 # 7. Repeat 1-6
 
-def weather_info(weatherString):
+def weather_string_to_tuple(weatherString):
     # input should be in following format:
     # YYYY-MM-DD, City, Country, high temperature, low temparature, amount of precipitation
     weatherData = weatherString.split(",")
@@ -36,13 +36,13 @@ def weather_info(weatherString):
 def collect_weather():
     # Prompt user for weather input until they enter blank
     while True:
-        weatherInput = input("Enter weather data below, or blank to exit:\n" +
+        userInput = input("Enter weather data below, or blank to exit:\n" +
                              "Format: YYYY-MM-DD, City, Country, high temperature (in Celsius), " +
                              "low temparature (in Celsius), amount of precipitation (in mm)\n--> ")
-        if weatherInput == "":
+        if userInput == "":
             print("Exiting program.")
             break
-        weather_info(weatherInput)
+        weather_string_to_tuple(userInput)
 
     return
 
