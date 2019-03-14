@@ -33,7 +33,7 @@ def collect_weather(outFile):
                 break
 
             if userInput.count(",") != 5:
-                print(f"Input should have 6 comma-separated fields, not {userInput.count(",")}")
+                print(f"Input should have 6 comma-separated fields, not {userInput.count(',')}")
                 continue
 
             date, city, country, hightemp, lowtemp, precip = userInput.split(",")
@@ -91,7 +91,7 @@ def collect_weather(outFile):
 
             weatherTuple = (year, month, day, city, country, hightemp, lowtemp, precip)
 
-            output.write(f"{",".join(weatherTuple)}\n")
+            output.write(f"{','.join(weatherTuple)}\n")
             print("Weather information written to file.")
 
 
